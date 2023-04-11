@@ -1,6 +1,6 @@
 package kata.codewars;
 
-public class Main
+public class SplitStrings
 {
     public static void main(String[] args)
     {
