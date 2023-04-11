@@ -1,11 +1,13 @@
 package kata.codewars;
 
+import java.util.Arrays;
+
 public class SplitStrings
 {
     public static void main(String[] args)
     {
         String[] w = solution("vav");
-        System.out.println(w);
+        System.out.println(Arrays.toString(w));
     }
 
     public static String[] solution(String s)
