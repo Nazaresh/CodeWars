@@ -12,6 +12,7 @@ public class DuplicateEncoder
         encode("Prespecialized");
     }
 
+    //first solution
     static String encode(String word)
     {
         StringBuilder newString = new StringBuilder();
@@ -34,5 +35,18 @@ public class DuplicateEncoder
         }
 
         return String.valueOf(newString);
+    }
+
+    //better solution
+    static String encodeBetter(String word)
+    {
+        word = word.toLowerCase();
+        String result = "";
+        for (int i = 0; i < word.length(); ++i)
+        {
+            char c = word.charAt(i);
+            result += word.lastIndexOf(c) == word.indexOf(c) ? "(" : ")";
+        }
+        return result;
     }
 }

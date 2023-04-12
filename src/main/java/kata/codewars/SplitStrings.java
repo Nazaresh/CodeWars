@@ -14,6 +14,7 @@ public class SplitStrings
         System.out.println(Arrays.toString(w));
     }
 
+    //first solution
     public static String[] solution(String s)
     {
         String[] q;
@@ -28,5 +29,12 @@ public class SplitStrings
             q = s.split("(?<=\\G.{2})");
         }
         return q;
+    }
+
+    //better solution
+    public static String[] solutionBetter(String s)
+    {
+        s = (s.length() % 2 == 0)?s:s+"_";
+        return s.split("(?<=\\G.{2})");
     }
 }
