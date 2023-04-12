@@ -9,11 +9,30 @@ public class DuplicateEncoder
 
     public static void main(String[] args)
     {
-        encode("wewe");
+        encode("Prespecialized");
     }
 
     static String encode(String word)
     {
-        return word;
+        StringBuilder newString = new StringBuilder();
+
+        for (int i = 0; i < word.length(); i++)
+        {
+            int charPosition = i;
+            String result = word.toLowerCase();
+
+            long a = result.chars().filter(num -> num == result.charAt(charPosition)).count();
+
+            if (a > 1)
+            {
+                newString.append(")");
+            }
+            else
+            {
+                newString.append("(");
+            }
+        }
+
+        return String.valueOf(newString);
     }
 }
